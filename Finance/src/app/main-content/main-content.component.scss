@@ -1,0 +1,63 @@
+.main-container {
+    position: relative;
+    &::before {
+        content: "";
+        width: 573px;
+        height: 573px;
+        background-image: url("./../../assets/images/blob-small.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        left: -110px;
+        top: 60px;
+    }
+    &__inner {
+        max-width: 1464px;
+        margin: 0 auto;
+        padding: 120px 24px;
+        display: flex;
+        width: 100%;
+        position: relative;
+    }
+    &__left {
+        flex: 0 0 40%;
+        position: relative;
+        &-title {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            margin-left: 48px;
+            &::after {
+                content: "";
+                position: absolute;
+                width: 236px;
+                height: 8px;
+                background: #000000 0% 0% no-repeat padding-box;
+                border-radius: 13px;
+                opacity: 0.7;
+                top: 110px;
+            }
+            img {
+                width: 407px;
+                height: 98px;
+            }
+        }
+        &::after {
+            content: "";
+            width: 430px;
+            height: 70px;
+            background-image: url("./../../assets/images/accounting_dots.svg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: absolute;
+            left: 50%;
+            bottom: -30px;
+        }
+    }
+    &__right {
+        flex: 0 0 60%;
+    }
+    &__collect {
+        margin-top: 82px;
+    }
+}

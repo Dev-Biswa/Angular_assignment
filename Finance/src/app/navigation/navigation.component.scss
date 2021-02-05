@@ -1,0 +1,42 @@
+@import "./../../mixins.scss";
+/// main class
+
+.main-header {
+    height: 123px;
+    &__inner {
+        margin: 0 auto;
+        max-width: 1464px;
+        padding: 0 24px;
+        display: flex;
+        height: 100%;
+        align-items: center;
+    }
+    &__logo {
+        flex: 0 0 auto;
+    }
+    &__nav {
+        flex: 1 1 auto;
+        &--list {
+            @include reset-list;
+            display: flex;
+            justify-content: flex-end;
+        }
+        &--item {
+            @include flex-center;
+            padding: 0 24px;
+            text-align: left;
+            font: normal normal normal 25px/34px Open Sans;
+            letter-spacing: 0px;
+            color: #222222;
+            transition: all 0.25s;
+            &:hover,
+            &:focus {
+                color: #663399;
+                cursor: pointer;
+            }
+        }
+    }
+    &__buttons {
+        display: flex;
+    }
+}

@@ -1,0 +1,90 @@
+.business-content {
+    background-image: url("../../assets/images/sol_wave_bg.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    display: flex;
+    &__inner {
+        max-width: 1464px;
+        margin: 0 auto;
+        padding: 0 24px;
+        display: flex;
+        width: 100%;
+        position: relative;
+    }
+    &__left {
+        flex: 0 0 50%;
+        display: flex;
+    }
+    &__right {
+        flex: 0 0 50%;
+        display: flex;
+        justify-content: normal;
+        align-items: center;
+    }
+    &__list {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        &.right {
+            margin-left: 36px;
+        }
+    }
+    &__item {
+        box-shadow: 0px 0px 30px #2321321f;
+        border: 1px solid #ffffff;
+        border-radius: 20px;
+        width: 390px;
+        padding: 24px;
+        background: white;
+        transition: all 0.25s;
+        &:hover,
+        &:focus {
+            background: rgba(102, 51, 153, 0.75);
+            cursor: pointer;
+            .card-label,
+            .card-description {
+                color: white;
+            }
+        }
+        &.left {
+            &:not(:first-child) {
+                margin-top: 36px;
+            }
+        }
+        .card-label {
+            color: #333333;
+            font-family: "Montserrat", sans-serif;
+            font-weight: 600;
+            font-size: 15px;
+            margin-top: 12px;
+            transition: color 0.25s;
+        }
+        .card-description {
+            color: #999999;
+            font-family: "Montserrat", sans-serif;
+            font-size: 15px;
+            margin-top: 12px;
+            transition: color 0.25s;
+        }
+    }
+    &__button {
+        width: 279px;
+        height: 58px;
+    }
+    &__boost {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        &::after {
+            content: "";
+            position: absolute;
+            width: 236px;
+            height: 8px;
+            background: #000000 0% 0% no-repeat padding-box;
+            border-radius: 13px;
+            opacity: 0.7;
+            top: 110px;
+        }
+    }
+}

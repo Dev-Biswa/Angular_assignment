@@ -1,0 +1,26 @@
+<div class="business-content">
+    <div class="business-content__inner">
+        <div class="business-content__left">
+            <div class="business-content__list left">
+                <div class="business-content__item left" *ngFor="let card of cards | slice:0:3">
+                    <img src="../../assets/images/{{card.src}}" alt="{{card.src}}">
+                    <div class="card-label">{{card.label}}</div>
+                    <div class="card-description">{{card.description}}</div>
+                </div>
+            </div>
+            <div class="business-content__list right">
+                <div class="business-content__item" *ngFor="let card of cards | slice:3:5">
+                    <img src="../../assets/images/{{card.src}}" alt="{{card.src}}">
+                    <div class="card-label">{{card.label}}</div>
+                    <div class="card-description">{{card.description}}</div>
+                </div>
+            </div>
+        </div>
+        <div class="business-content__right">
+            <div class="business-content__boost">
+                <img src="./../../assets/images/Boost your business.svg" alt="boost"/>
+            </div>
+            <button type="button" class="business-content__button open-btn" >Get an Open Account</button>
+        </div>
+    </div>
+</div>
