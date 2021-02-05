@@ -8,6 +8,48 @@
                 <img src="./../../assets/images/collect_img-video.png" alt="collect img"/>
             </div>
         </div>
-        <div class="main-container__right"></div>
+        <div class="main-container__right">
+            <form novalidate [formGroup]="formGroup" class="main-container__form">
+                <div class="main-container__form-container">
+                    <div class="form-title">Eligibility Criteria</div>
+                    <div class="form-group">
+                        <label for="monthlyincome">Monthly Income</label>
+                        <div class="monthly__income">{{incomeValue |currency:'INR':'symbol-narrow'}}</div>
+                        <p-slider formControlName="monthlyIncome" [min]="100000" [max]="300000" (onChange)="handleChange($event)"></p-slider>
+                    </div>
+                    <div class="form-group">
+                        <label for="monthlyexpense">Monthly Expense</label>
+                        <div class="monthly__income">{{expenseValue |currency:'INR':'symbol-narrow'}}</div>
+                        <p-slider formControlName="monthlyExpense" [min]="1000" [max]="100000" (onChange)="handleExpenseChange($event)"></p-slider>
+                    </div>
+                    <div class="form-group">
+                        <label for="repaymenttenure">Repayment Tenure</label>
+                        <!-- <p-dropdown [options]="tenures" optionLabel="name"></p-dropdown> -->
+                    </div>
+                    <div class="form-group">
+                        <label for="doyou">Do you have an existing loan ?
+                            <p-inputSwitch formControlName="enabled"></p-inputSwitch>
+                        </label>
+                        
+                    </div>
+
+                    <div class="form-group">
+                        <label for="emi">EMI of existing loan (optional)</label>
+                        <input type="number" pInputText />
+                    </div>
+                </div>
+            </form>
+            <div class="main-container__loan">
+                <div class="main-container__loan-amount">
+                    <label for="loanamt">Your Loan Amount</label>
+                    <div class="currency">₹ 1,00,000</div>
+                </div>
+                <div class="main-container__loan-emi">
+                    <label for="emi">Your EMI will be</label>
+                    <div class="currency">₹ 15,000</div>
+                </div>
+                <button type="button" class="main-container__loan-button open-btn" >Get Money</button>
+            </div>
+        </div>
     </div>
 </div>
